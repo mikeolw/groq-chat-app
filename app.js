@@ -227,7 +227,7 @@ form.addEventListener('submit', (e) => {
 
   const loadingEl = addMessage('생각 중...', 'ai loading')
 
-  fetch('http://localhost:3000/api/chat', {
+  fetch('/api/chat', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ prompt })
