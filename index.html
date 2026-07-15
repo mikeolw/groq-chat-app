@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GROQ CHAT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="phone-shell">
+        <div class="phone-top">
+            <span class="antenna"></span>
+            <span class="camera-dot"></span>
+            <span class="speaker-slit"></span>
+        </div>
+
+        <div class="phone-screen">
+
+            <div class="status-bar">
+                <svg class="ico" viewBox="0 0 16 12" shape-rendering="crispEdges">
+                    <rect x="0" y="8" width="2" height="4"/>
+                    <rect x="3" y="6" width="2" height="6"/>
+                    <rect x="6" y="4" width="2" height="8"/>
+                    <rect x="9" y="2" width="2" height="10"/>
+                    <rect x="12" y="0" width="2" height="12"/>
+                </svg>
+
+                <span class="status-logo">GROQ CHAT</span>
+
+                <svg class="ico ico-clock" viewBox="0 0 16 16" shape-rendering="crispEdges">
+                    <rect x="3" y="1" width="10" height="14" fill="none" stroke="currentColor" stroke-width="1.4"/>
+                    <rect x="7" y="4" width="1.5" height="5"/>
+                    <rect x="7" y="7.5" width="3.5" height="1.5"/>
+                </svg>
+
+                <svg class="ico" viewBox="0 0 16 16" shape-rendering="crispEdges">
+                    <rect x="1" y="1" width="6" height="6"/>
+                    <rect x="9" y="1" width="6" height="6"/>
+                    <rect x="1" y="9" width="6" height="6"/>
+                    <rect x="9" y="9" width="6" height="6"/>
+                </svg>
+
+                <svg class="ico ico-battery" viewBox="0 0 22 12" shape-rendering="crispEdges">
+                    <rect x="0" y="0" width="20" height="12" fill="none" stroke="currentColor" stroke-width="1.4"/>
+                    <rect x="20" y="4" width="2" height="4"/>
+                    <rect x="2" y="2" width="16" height="8" class="batt-fill"/>
+                </svg>
+            </div>
+
+            <div class="breadcrumb-bar">
+                <svg class="ico-env" viewBox="0 0 20 16" shape-rendering="crispEdges">
+                    <rect x="0" y="0" width="20" height="16" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M0 1 L10 9 L20 1" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+                <span class="breadcrumb-text">메시지<span class="crumb-sep">&#8250;</span>AI<span class="crumb-sep">&#8250;</span>채팅창</span>
+            </div>
+
+            <main id="chat" class="chat">
+                <div class="empty-state" id="emptyState">
+                    <p>무엇을 도와드릴까요?</p>
+                </div>
+            </main>
+
+            <div class="status-footer">
+                <span id="dateLabel">2026.07.15 WED</span>
+                <span id="byteCounter">(0 / 400)</span>
+            </div>
+
+            <div class="nav-row">
+                <button type="button" class="nav-btn" id="scrollUpBtn">
+                    <svg class="ico-nav" viewBox="0 0 16 16" shape-rendering="crispEdges"><path d="M12 0 L2 8 L12 16 Z"/></svg>
+                    이전 대화
+                </button>
+                <button type="button" class="nav-btn" id="clearBtn">
+                    새 대화
+                    <svg class="ico-nav" viewBox="0 0 16 16" shape-rendering="crispEdges"><path d="M4 0 L14 8 L4 16 Z"/></svg>
+                </button>
+            </div>
+
+            <form id="form" class="input-bar">
+                <input id="q" placeholder="메시지 입력..." autocomplete="off" maxlength="400" />
+                <button id="btn" type="submit">
+                    <svg viewBox="0 0 16 16" shape-rendering="crispEdges"><path d="M1 1 L15 8 L1 15 L4 8 Z"/></svg>
+                </button>
+            </form>
+
+            <div class="bottom-icons">
+                <button type="button" class="icon-btn" id="backBtn" title="위로">
+                    <svg viewBox="0 0 16 16" shape-rendering="crispEdges"><path d="M11 1 L4 8 L11 15" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+                </button>
+                <button type="button" class="icon-btn" id="fwdBtn" title="아래로">
+                    <svg viewBox="0 0 16 16" shape-rendering="crispEdges"><path d="M4 1 L4 15 L13 8 Z"/></svg>
+                </button>
+                <button type="button" class="icon-btn" id="homeBtn" title="새로 시작">
+                    <svg viewBox="0 0 16 16" shape-rendering="crispEdges"><path d="M8 1 L15 7 L13 7 L13 15 L9 15 L9 10 L7 10 L7 15 L3 15 L3 7 L1 7 Z"/></svg>
+                </button>
+                <button type="button" class="icon-btn" id="globeBtn" title="정보">
+                    <svg viewBox="0 0 16 16" shape-rendering="crispEdges">
+                        <rect x="1" y="1" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4"/>
+                        <rect x="1" y="6" width="14" height="1.6"/>
+                        <rect x="7.2" y="1" width="1.6" height="14"/>
+                    </svg>
+                </button>
+            </div>
+
+        </div>
+
+        <div class="phone-hinge">
+            <span class="hinge-knob"></span>
+        </div>
+
+        <div class="phone-base">
+            <div class="dpad">
+                <span class="dpad-ring"></span>
+                <span class="dpad-center">OK</span>
+            </div>
+            <div class="keypad-deco">
+                <span></span><span></span><span></span>
+                <span></span><span></span><span></span>
+                <span></span><span></span><span></span>
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
