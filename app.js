@@ -238,7 +238,7 @@ form.addEventListener('submit', (e) => {
       loadingEl.classList.remove('loading')
     })
     .catch(() => {
-      setMessageText(loadingEl, '❌ 서버 안 켜짐? (server서 node index.js 먼저)')
+      setMessageText(loadingEl, '서버 안 켜짐 (server서 node index.js 먼저)')
       loadingEl.classList.remove('loading')
     })
     .finally(() => {
